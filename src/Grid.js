@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 
 // Import Components
 import NavBar from './NavBar';
+import Paper from './RepoPage';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -40,7 +41,7 @@ const GridLayout = () => {
                     <NavBar />
                 </Grid>
                 <Grid item xs={12} md={6} className={classes.secondRow} >
-                    Hello World 2
+                    <Paper />
                 </Grid>
                 <Grid item xs={12} md={6} className={classes.secondRow2} >
                     Hello World 3
