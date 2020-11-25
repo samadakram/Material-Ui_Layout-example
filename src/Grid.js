@@ -15,18 +15,9 @@ const useStyles = makeStyles((theme) => ({
     },
     secondRow: {
         backgroundColor: 'yellow',
-    },
-    secondRow2: {
-        backgroundColor: 'royalBlue',
-    },
-    thirdRow: {
-        backgroundColor: 'gray',
-    },
-    thirdRow2: {
-        backgroundColor: 'khaki',
-    },
-    thirdRow3: {
-        backgroundColor: 'pink',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 }));
 
@@ -40,20 +31,8 @@ const GridLayout = () => {
                 <Grid item xs={12} className={classes.firstRow} >
                     <NavBar />
                 </Grid>
-                <Grid item xs={12} md={6} className={classes.secondRow} >
+                <Grid item xs={12} className={classes.secondRow} >
                     <Paper />
-                </Grid>
-                <Grid item xs={12} md={6} className={classes.secondRow2} >
-                    Hello World 3
-                </Grid>
-                <Grid item xs={6} md={4} className={classes.thirdRow} >
-                    Hello World 4
-                </Grid>
-                <Grid item xs={6} md={4} className={classes.thirdRow2} >
-                    Hello World 5
-                </Grid>
-                <Grid item xs={12} md={4} className={classes.thirdRow3} >
-                    Hello World 6
                 </Grid>
             </Grid>
         </div>
