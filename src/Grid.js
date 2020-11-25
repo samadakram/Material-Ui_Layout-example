@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     firstRow: {
-        backgroundColor: 'lightBlue',
+       
     },
     secondRow: {
         backgroundColor: 'yellow',
