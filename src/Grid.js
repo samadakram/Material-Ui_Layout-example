@@ -2,6 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
+// Import Components
+import NavBar from './NavBar';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -34,7 +37,7 @@ const GridLayout = () => {
         <div>
             <Grid container>
                 <Grid item xs={12} className={classes.firstRow} >
-                    Hello World 1
+                    <NavBar />
                 </Grid>
                 <Grid item xs={12} md={6} className={classes.secondRow} >
                     Hello World 2
