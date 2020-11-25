@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import GridLayout from './Grid';
 
 function App() {
   return (
     <div>
-      Hello World !
+      <GridLayout />
     </div>
   );
 }
