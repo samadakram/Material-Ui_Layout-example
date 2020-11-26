@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import GridLayout from './Grid';
+
+// Import Components
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div>
-      <GridLayout />
+      <NavBar />
     </div>
   );
 }
