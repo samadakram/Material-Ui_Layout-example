@@ -23,7 +23,6 @@ export default function GlobalData() {
     useEffect( ()=>{
         async function fetchGlobalData(){
             const apiResponse = await fetch('https://corona.lmao.ninja/v2/all?yesterday');
-            console.log(apiResponse);
 
             const dataFromApi = await apiResponse.json();
             console.log(dataFromApi);
