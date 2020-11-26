@@ -23,12 +23,12 @@ export default function MainGrid() {
                 <Grid item xs={4}>
                     <Paper className={classes.paper}>
                         Global Data
-              </Paper>
+                    </Paper>
                 </Grid>
                 <Grid item xs={8}>
                     <Paper className={classes.paper}>
                         Country Data
-          </Paper>
+                    </Paper>
                 </Grid>
             </Grid>
         </div>
