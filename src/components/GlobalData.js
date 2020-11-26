@@ -29,7 +29,7 @@ export default function GlobalData() {
                 </Typography>
             </Paper>
             <Paper elevation={3}>
-                <Typography variant="h4" gutterBottom>
+                <Typography variant="h4" gutterBottom style={{color: 'green',}}>
                     1000
                 </Typography>
                 <Typography variant="subtitle2" gutterBottom>
@@ -37,7 +37,7 @@ export default function GlobalData() {
                 </Typography>
             </Paper>
             <Paper elevation={3}>
-                <Typography variant="h4" gutterBottom>
+                <Typography variant="h4" gutterBottom style={{color: 'orange',}}>
                     1000
                 </Typography>
                 <Typography variant="subtitle2" gutterBottom>
@@ -45,7 +45,7 @@ export default function GlobalData() {
                 </Typography>
             </Paper>
             <Paper elevation={3}>
-                <Typography variant="h4" gutterBottom>
+                <Typography variant="h4" gutterBottom style={{color: 'red',}}>
                     1000
                 </Typography>
                 <Typography variant="subtitle2" gutterBottom>
