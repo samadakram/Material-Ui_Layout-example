@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
@@ -17,6 +17,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function GlobalData() {
     const classes = useStyles();
+
+    const [globalData, setGlobalData] = useState();
+
+    useEffect( ()=>{
+        async function fetchGlobalData(){
+            const apiResponse = await fetch('https://corona.lmao.ninja/v2/all?yesterday');
+            console.log(apiResponse);
+
+            const dataFromApi = await apiResponse.json();
+            console.log(dataFromApi);
+            setGlobalData(dataFromApi);
+        }
+        fetchGlobalData();
+    },[]);
 
     return (
         <div className={classes.root}>
