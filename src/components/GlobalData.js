@@ -18,7 +18,23 @@ const useStyles = makeStyles((theme) => ({
 export default function GlobalData() {
     const classes = useStyles();
 
-    const [globalData, setGlobalData] = useState();
+    const [globalData, setGlobalData] = useState({});
+
+    // FetchData func
+    
+    // useEffect( ()=>{
+    //     const fetchGlobalData = async () =>{
+    //         try {
+    //             const apiResponse = await fetch(globalData);
+    //             const dataFromApi = await apiResponse.json();
+    //             console.log("Data =>",dataFromApi);
+    //             console.log("Data =>",dataFromApi.confirmed.value);
+    //         } catch (error) {
+    //             console.log(error);
+    //         }
+    //     }
+    //     fetchGlobalData();
+    // },[]);
 
     useEffect( ()=>{
         async function fetchGlobalData(){
