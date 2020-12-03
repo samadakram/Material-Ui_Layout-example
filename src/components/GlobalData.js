@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Countup from 'react-countup';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -51,7 +52,7 @@ export default function GlobalData() {
         <div className={classes.root}>
             <Paper elevation={3}>
                 <Typography variant="h4" gutterBottom>
-                    {globalData && globalData.confirmed && globalData.confirmed.value}
+                    <Countup start={0} end={globalData.confirmed ? globalData.confirmed.value : 0} duration={2} separator="," />
                 </Typography>
                 <Typography variant="subtitle2" gutterBottom>
                     Global Data as of Today
@@ -59,23 +60,15 @@ export default function GlobalData() {
             </Paper>
             <Paper elevation={3}>
                 <Typography variant="h4" gutterBottom style={{ color: 'green', }}>
-                    {globalData && globalData.recovered && globalData.recovered.value}
+                    <Countup start={0} end={globalData.recovered ? globalData.recovered.value : 0} duration={2} separator="," />
                 </Typography>
                 <Typography variant="subtitle2" gutterBottom>
                     Recoverd
                 </Typography>
             </Paper>
             <Paper elevation={3}>
-                <Typography variant="h4" gutterBottom style={{ color: 'orange', }}>
-                    1000
-                </Typography>
-                <Typography variant="subtitle2" gutterBottom>
-                    Active
-                </Typography>
-            </Paper>
-            <Paper elevation={3}>
                 <Typography variant="h4" gutterBottom style={{ color: 'red', }}>
-                    {globalData && globalData.deaths && globalData.deaths.value}
+                    <Countup start={0} end={globalData.deaths ? globalData.deaths.value : 0} duration={2} separator="," />
                 </Typography>
                 <Typography variant="subtitle2" gutterBottom>
                     Deaths
