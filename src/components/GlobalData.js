@@ -59,7 +59,7 @@ export default function GlobalData() {
             </Paper>
             <Paper elevation={3}>
                 <Typography variant="h4" gutterBottom style={{color: 'green',}}>
-                    1000
+                {globalData && globalData.recovered && globalData.recovered.value}
                 </Typography>
                 <Typography variant="subtitle2" gutterBottom>
                     Recoverd
