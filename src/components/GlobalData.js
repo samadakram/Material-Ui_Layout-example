@@ -19,7 +19,9 @@ const useStyles = makeStyles((theme) => ({
 export default function GlobalData() {
     const classes = useStyles();
 
+    const loading = "Loading..."
     const [globalData, setGlobalData] = useState({});
+    const [dataLoading, setDataLoading] = useState(false);
 
     // FetchData func
 
@@ -39,14 +41,45 @@ export default function GlobalData() {
 
     useEffect(() => {
         async function fetchGlobalData() {
+            setDataLoading(true);
             const apiResponse = await fetch('https://covid19.mathdro.id/api');
 
             const dataFromApi = await apiResponse.json();
             console.log(dataFromApi);
             setGlobalData(dataFromApi);
+            setDataLoading(false);
         }
         fetchGlobalData();
     }, []);
+
+    if (dataLoading) {
+        return <div className={classes.root}>
+            <Paper elevation={3}>
+                <Typography variant="h4" gutterBottom>
+                    {loading}
+                </Typography>
+                <Typography variant="subtitle2" gutterBottom>
+                    Global Data as of Today
+            </Typography>
+            </Paper>
+            <Paper elevation={3}>
+                <Typography variant="h4" gutterBottom style={{ color: 'green', }}>
+                    {loading}
+                </Typography>
+                <Typography variant="subtitle2" gutterBottom>
+                    Recoverd
+            </Typography>
+            </Paper>
+            <Paper elevation={3}>
+                <Typography variant="h4" gutterBottom style={{ color: 'red', }}>
+                    {loading}
+                </Typography>
+                <Typography variant="subtitle2" gutterBottom>
+                    Deaths
+            </Typography>
+            </Paper>
+        </div>
+    }
 
     return (
         <div className={classes.root}>
