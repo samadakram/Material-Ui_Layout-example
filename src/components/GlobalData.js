@@ -74,6 +74,7 @@ export default function GlobalData() {
                 <Typography variant="subtitle2" gutterBottom>
                     Global Data as of Today
                 </Typography>
+                <Typography color="textSecondary"> { new Date(globalData.lastUpdate).toDateString()} </Typography>
             </Paper>
             <Paper elevation={3}>
                 <Typography variant="h4" gutterBottom style={{ color: 'green', }}>
@@ -82,6 +83,7 @@ export default function GlobalData() {
                 <Typography variant="subtitle2" gutterBottom>
                     Recoverd
                 </Typography>
+                <Typography color="textSecondary"> { new Date(globalData.lastUpdate).toDateString()} </Typography>
             </Paper>
             <Paper elevation={3}>
                 <Typography variant="h4" gutterBottom style={{ color: 'red', }}>
@@ -90,6 +92,7 @@ export default function GlobalData() {
                 <Typography variant="subtitle2" gutterBottom>
                     Deaths
                 </Typography>
+                <Typography color="textSecondary"> { new Date(globalData.lastUpdate).toDateString()} </Typography>
             </Paper>
         </div>
     );
