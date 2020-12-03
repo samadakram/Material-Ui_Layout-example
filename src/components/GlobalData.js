@@ -23,22 +23,6 @@ export default function GlobalData() {
     const [globalData, setGlobalData] = useState({});
     const [dataLoading, setDataLoading] = useState(false);
 
-    // FetchData func
-
-    // useEffect( ()=>{
-    //     const fetchGlobalData = async () =>{
-    //         try {
-    //             const apiResponse = await fetch(globalData);
-    //             const dataFromApi = await apiResponse.json();
-    //             console.log("Data =>",dataFromApi);
-    //             console.log("Data =>",dataFromApi.confirmed.value);
-    //         } catch (error) {
-    //             console.log(error);
-    //         }
-    //     }
-    //     fetchGlobalData();
-    // },[]);
-
     useEffect(() => {
         async function fetchGlobalData() {
             setDataLoading(true);
