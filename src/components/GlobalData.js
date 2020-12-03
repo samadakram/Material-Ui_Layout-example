@@ -51,7 +51,7 @@ export default function GlobalData() {
         <div className={classes.root}>
             <Paper elevation={3}>
                 <Typography variant="h4" gutterBottom>
-                    1000
+                {globalData && globalData.confirmed && globalData.confirmed.value}
                 </Typography>
                 <Typography variant="subtitle2" gutterBottom>
                     Global Data as of Today
